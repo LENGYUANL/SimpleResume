@@ -9,10 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <EditText
+            android:id="@+id/info_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="name"/>
         <EditText
+            android:id="@+id/info_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="email"/>
