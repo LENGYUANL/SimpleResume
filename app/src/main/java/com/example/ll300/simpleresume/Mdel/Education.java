@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by ll300 on 2017/7/29.
@@ -18,7 +19,11 @@ public class Education implements Parcelable{
     public Date endDate;
     public List<String> courses;
 
-    public Education() {}
+    public Education() {
+        id = UUID.randomUUID().toString();
+    }
+    //一定！一定！！一定！！！要记得在构造函数中生成id！！！一开始因为缺少这一句一直发生Nullexception的错误；
+    // 还有缺少id在处理添加删除的时候也会有问题（代码中会用到id）
 
     protected Education(Parcel in) {
         id = in.readString();
