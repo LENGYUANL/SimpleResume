@@ -72,7 +72,7 @@ public class EditEducationActivity extends EditBaseActivity<Education> {
 
     @Override
     protected Education initializeData() {
-        return getIntent().getParcelableExtra("education");
+        return getIntent().getParcelableExtra(KEY_EDUCATION);
     }
 
 
